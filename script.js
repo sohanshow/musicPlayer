@@ -112,3 +112,6 @@ loadSong(songs[songIndex]);
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
 
+
+
+//More of what I want to add.
