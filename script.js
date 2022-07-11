@@ -151,7 +151,23 @@ updateProgressBar = (e) =>{
        currentTimeEl.textContent = `${currentMinutes}: ${currentSeconds}`
        
 
+
     } 
+}
+
+//Set Progress Bar
+
+function setProgressBar(e) {
+
+    const width = this.clientWidth;
+
+    const clickX = e.offsetX;
+
+    const { duration } = music;
+
+
+    music.currentTime  =  (clickX / width) * duration;
+
 }
 
 
@@ -160,6 +176,7 @@ updateProgressBar = (e) =>{
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
 music.addEventListener('timeupdate', updateProgressBar);
+progressContainer.addEventListener('click', setProgressBar);
 
 
 
